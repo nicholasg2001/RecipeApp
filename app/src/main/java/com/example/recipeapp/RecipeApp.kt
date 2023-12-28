@@ -23,6 +23,7 @@ fun RecipeApp(navController: NavHostController){
         composable(route = Screen.DetailScreen.route){
             val category = navController.previousBackStackEntry?.savedStateHandle?.
             get<Category>("cat") ?: Category("", "", "", "")
+            CategoryDetailScreen(category = category)
         }
     }
 }
